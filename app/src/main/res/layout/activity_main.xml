@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MortgageCalculator">
+
+    <EditText
+        android:id="@+id/LoanAmountGirdi"
+        android:layout_width="0dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="39dp"
+        android:layout_marginBottom="39dp"
+        android:ems="5"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/MonthlyPayment"
+        app:layout_constraintEnd_toEndOf="@+id/InterestRateGirdi"
+        app:layout_constraintStart_toStartOf="@+id/InterestRateGirdi"
+        app:layout_constraintTop_toBottomOf="@+id/InterestRate" />
+
+    <EditText
+        android:id="@+id/InterestRateGirdi"
+        android:layout_width="0dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="241dp"
+        android:layout_marginEnd="7dp"
+        android:layout_marginRight="7dp"
+        android:layout_marginBottom="240dp"
+        android:ems="5"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/LoanTerm"
+        app:layout_constraintEnd_toStartOf="@+id/Percentage"
+        app:layout_constraintStart_toEndOf="@+id/InterestRate"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/MC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="33dp"
+        android:layout_marginLeft="33dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/MC"
+        android:textColor="#30398A"
+        android:textColorLink="#393F74"
+        android:textSize="38sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/PurchasePrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:text="@string/PurchasePrice"
+        android:textIsSelectable="false"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/Dollar1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/Dollar1" />
+
+    <TextView
+        android:id="@+id/DownPaymentAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:text="@string/DownPaymentAmount"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@+id/DPAGirdi"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/InterestRate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="46dp"
+        android:layout_marginEnd="128dp"
+        android:layout_marginRight="128dp"
+        android:text="@string/InterestRate"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/InterestRateGirdi"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/DownPaymentAmount" />
+
+    <TextView
+        android:id="@+id/LoanAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginBottom="46dp"
+        android:text="@string/LoanAmount"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/MonthlyPayment"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/MonthlyPayment"
+        android:layout_width="0dp"
+        android:layout_height="101dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginRight="15dp"
+        android:background="#87AAE6"
+        android:text="@string/MonthlyPayment"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/TenYears"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TenYears" />
+
+    <TextView
+        android:id="@+id/TenYears"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="7dp"
+        android:layout_marginLeft="7dp"
+        android:layout_marginBottom="286dp"
+        android:text="@string/TenYears"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/MonthlyPayment" />
+
+    <TextView
+        android:id="@+id/TwentyYears"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="27dp"
+        android:layout_marginRight="27dp"
+        android:text="@string/TwentyYears"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/LoanAmountGirdi"
+        app:layout_constraintTop_toTopOf="@+id/MonthlyPayment" />
+
+    <TextView
+        android:id="@+id/ThirtyYears"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="31dp"
+        android:layout_marginEnd="18dp"
+        android:layout_marginRight="18dp"
+        android:text="@string/ThirtyYears"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/MonthlyPayment"
+        app:layout_constraintTop_toTopOf="@+id/MonthlyPayment" />
+
+    <TextView
+        android:id="@+id/LoanTerm"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginRight="15dp"
+        android:background="#E6DE0C"
+        android:text="@string/LoanTerm"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/MPSonuc"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/MPSonuc" />
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="0dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginLeft="22dp"
+        android:layout_marginTop="180dp"
+        android:layout_marginEnd="19dp"
+        android:layout_marginRight="19dp"
+        android:layout_marginBottom="180dp"
+        android:scrollbarSize="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/Years"
+        app:layout_constraintTop_toBottomOf="@+id/LoanAmount" />
+
+    <EditText
+        android:id="@+id/PurchasePriceGirdi"
+        android:layout_width="0dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="99dp"
+        android:layout_marginBottom="99dp"
+        android:ems="5"
+        android:inputType="textPersonName"
+        android:textIsSelectable="false"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/InterestRateGirdi"
+        app:layout_constraintEnd_toEndOf="@+id/DPAGirdi"
+        app:layout_constraintStart_toStartOf="@+id/DPAGirdi"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/DPAGirdi"
+        android:layout_width="0dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="71dp"
+        android:layout_marginBottom="71dp"
+        android:ems="5"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="@+id/InterestRateGirdi"
+        app:layout_constraintEnd_toEndOf="@+id/InterestRateGirdi"
+        app:layout_constraintStart_toStartOf="@+id/InterestRateGirdi"
+        app:layout_constraintTop_toTopOf="@+id/PurchasePriceGirdi" />
+
+    <TextView
+        android:id="@+id/MPSonuc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="26dp"
+        android:layout_marginLeft="26dp"
+        android:layout_marginTop="23dp"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/seekBar"
+        app:layout_constraintTop_toBottomOf="@+id/seekBar" />
+
+    <TextView
+        android:id="@+id/TenYearsSonuc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:layout_marginLeft="6dp"
+        android:layout_marginTop="12dp"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/TenYears"
+        app:layout_constraintTop_toBottomOf="@+id/TenYears" />
+
+    <TextView
+        android:id="@+id/ThirtyYearsSonuc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="10dp"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/ThirtyYears"
+        app:layout_constraintTop_toBottomOf="@+id/ThirtyYears" />
+
+    <TextView
+        android:id="@+id/Dollar1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="7dp"
+        android:layout_marginLeft="7dp"
+        android:text="@string/Dollar1"
+        android:textIsSelectable="false"
+        android:textSize="18sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/PurchasePriceGirdi"
+        app:layout_constraintStart_toEndOf="@+id/PurchasePriceGirdi" />
+
+    <TextView
+        android:id="@+id/Dollar2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="7dp"
+        android:layout_marginLeft="7dp"
+        android:text="@string/Dollar2"
+        android:textSize="18sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/DPAGirdi"
+        app:layout_constraintStart_toEndOf="@+id/DPAGirdi" />
+
+    <TextView
+        android:id="@+id/Dollar3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="7dp"
+        android:layout_marginLeft="7dp"
+        android:text="@string/Dolar3"
+        android:textSize="18sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/LoanAmountGirdi"
+        app:layout_constraintStart_toEndOf="@+id/LoanAmountGirdi" />
+
+    <TextView
+        android:id="@+id/Percentage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:text="@string/Percentage"
+        android:textSize="18sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/InterestRateGirdi"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/InterestRateGirdi" />
+
+    <TextView
+        android:id="@+id/MonthlyPayment2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginBottom="28dp"
+        android:text="@string/MonthlyPayment2"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/LoanTerm"
+        app:layout_constraintStart_toStartOf="@+id/LoanTerm" />
+
+    <TextView
+        android:id="@+id/TwentyYearsSonuc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="7dp"
+        android:layout_marginLeft="7dp"
+        android:layout_marginTop="11dp"
+        android:textSize="18sp"
+        android:textStyle="normal"
+        app:layout_constraintStart_toStartOf="@+id/TwentyYears"
+        app:layout_constraintTop_toBottomOf="@+id/TwentyYears" />
+
+    <TextView
+        android:id="@+id/Years"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/LoanTerm"
+        app:layout_constraintEnd_toEndOf="@+id/MonthlyPayment2"
+        app:layout_constraintStart_toEndOf="@+id/MonthlyPayment2" />
+</androidx.constraintlayout.widget.ConstraintLayout>

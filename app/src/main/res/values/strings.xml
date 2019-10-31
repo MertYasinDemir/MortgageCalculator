@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">MortgageCalculator</string>
+    <string name="MC">Mortgage Calculator</string>
+    <string name="PurchasePrice">Purchase Price:</string>
+    <string name="DownPaymentAmount">Down Payment Amount:</string>
+    <string name="InterestRate">Interest Rate:</string>
+    <string name="LoanAmount">Loan Amount:</string>
+    <string name="MonthlyPayment">Monthly Payments ($)</string>
+    <string name="TenYears">10 Years:</string>
+    <string name="TwentyYears">20 Years:</string>
+    <string name="ThirtyYears">30 Years:</string>
+    <string name="LoanTerm">Loan Term (years):</string>
+    <string name="MonthlyPayment2">Monthly Payment ($):</string>
+    <string name="Dollar1">$</string>
+    <string name="Dollar2">$</string>
+    <string name="Dolar3">$</string>
+    <string name="Percentage">%</string>
+</resources>
